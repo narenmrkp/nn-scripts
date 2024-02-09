@@ -1,0 +1,13 @@
+# Run below commands(2 to 5 & 12) in Local Laptop VSCode, fi Terraform installed on Windows and plugin added in VSCode
+terraform init
+terraform validate
+terraform plan
+terraform apply
+
+# Now it will open a cloud shell to run below commands and update Kubernetes configuration
+aws eks update-kubeconfig --name <cluster-name> --region <cluster-region>
+aws configure
+kubectl get nodes
+
+terraform destroy      # on Local laptop VSCode
+
